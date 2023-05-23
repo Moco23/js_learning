@@ -4,9 +4,6 @@ var gradovi = {
   Pula: 25,
 };
 
-document.getElementById("vrijeme").innerHTML =
-  "<p>" + gradovi["Beograd"] + "</p>";
-document.getElementById("vrijeme").innerHTML +=
-  "<p>" + gradovi["Zagreb"] + "</p>";
-document.getElementById("vrijeme").innerHTML +=
-  "<p>" + gradovi["Pula"] + "</p>";
+document.getElementById("vrijeme").innerHTML = `<p>${gradovi["Beograd"]}</p>`;
+document.getElementById("vrijeme").innerHTML += `<p>${gradovi["Zagreb"]}</p>`;
+document.getElementById("vrijeme").innerHTML += `<p>${gradovi["Pula"]}</p>`;
