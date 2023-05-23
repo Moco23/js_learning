@@ -1,9 +1,12 @@
 var gradovi = {
-  Beograd: 50,
-  Zagreb: 50,
-  Pula: 50,
+  Beograd: 22,
+  Zagreb: 23,
+  Pula: 25,
 };
 
-document.getElementById("vrijeme").innerHTML = gradovi["Beograd"];
-document.getElementById("vrijeme").innerHTML += gradovi["Zagreb"];
-document.getElementById("vrijeme").innerHTML += gradovi["Pula"];
+document.getElementById("vrijeme").innerHTML =
+  "<p>" + gradovi["Beograd"] + "</p>";
+document.getElementById("vrijeme").innerHTML +=
+  "<p>" + gradovi["Zagreb"] + "</p>";
+document.getElementById("vrijeme").innerHTML +=
+  "<p>" + gradovi["Pula"] + "</p>";
