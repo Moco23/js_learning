@@ -1,20 +1,22 @@
-var button = prompt("Set the color.");
+var button = prompt("Set the color.").toLowerCase();
 button = button.toLowerCase();
+
 if (button == "plava") {
-  document.getElementById("btn").style.backgroundColor = "blue";
+  var buttons = document.getElementById("btn");
+  buttons.style.backgroundColor = "blue";
 } else if (button == "crvena") {
-  document.getElementById("btn").style.backgroundColor = "red";
+  buttons.style.backgroundColor = "red";
 } else {
-  document.getElementById("btn").style.backgroundColor = "green";
+  buttons.style.backgroundColor = "green";
 }
 
-var buttonTextColor = prompt("Set the color of text");
-buttonTextColor = buttonTextColor.toLowerCase();
+var buttonTextColor = prompt("Set the color of text").toLowerCase();
+buttonColors = document.getElementById("btn");
 
 if (buttonTextColor == "zuta") {
-  document.getElementById("btn").style.color = "yellow";
+  buttonColors.style.color = "yellow";
 } else if (buttonTextColor == "bijela") {
-  document.getElementById("btn").style.color = "white";
+  buttonColors.style.color = "white";
 } else {
-  document.getElementById("btn").style.color = "orange";
+  dbuttonColors.style.color = "orange";
 }
