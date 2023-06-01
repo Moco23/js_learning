@@ -13,5 +13,19 @@ document
   .addEventListener("click", function () {
     var nasumicaOdabir = Math.floor(Math.random() * 3);
     var odgovor = prompt(pitanja[nasumicaOdabir]);
-    console.log(odgovor);
+
+    if (odgovor === "odlicno") {
+      console.log("tocan odgovor");
+    } else {
+    }
+
+    if (odgovor === "pula") {
+      console.log("Tocan odgovor");
+    } else {
+    }
+
+    if (odgovor === "18") {
+      console.log("Tocan odgovor");
+    } else {
+    }
   });
