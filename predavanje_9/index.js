@@ -7,7 +7,9 @@ document.getElementById("buyBtn").addEventListener("click", function () {
 });
 
 // adding evenlt lisener on elements with class naem using a for loop
+// auto counting elements script
 var btnNumbers = document.getElementsByClassName("btnTest").length;
+// js loop for add event lisener on elements with className
 for (var elements = 0; elements < btnNumbers; elements++) {
   document
     .getElementsByClassName("btnTest")
