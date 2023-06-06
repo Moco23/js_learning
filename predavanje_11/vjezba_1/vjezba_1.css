@@ -1,4 +1,9 @@
 .coding_img {
   width: 250px;
   height: auto;
+  transition: 0.2s ease-in-out;
+}
+
+.zoom {
+  transform: scale(1.5);
 }
