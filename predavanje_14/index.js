@@ -1,7 +1,5 @@
-// $ (document).ready(function() {})
 $(document).ready(function () {
-  // login info
-  const user_naem1 = "admin1";
+  const user_name1 = "admin1";
   const password1 = "password1";
   const successMessage = $("<p>").addClass("success").insertAfter(".form");
 
@@ -11,13 +9,21 @@ $(document).ready(function () {
   });
 
   $("#login_btn").click(function () {
+    $("#usserMess").hide();
+    $("#passMess").hide();
+
     const user_name_holder = $("#user_name").val();
     const password_holder = $("#password").val();
-    if (user_name_holder == user_naem1 && password_holder == password1) {
+
+    if (user_name_holder !== user_name1) {
+      $("#usserMess").show();
+    }
+    if (password_holder !== password1) {
+      $("#passMess").show();
+    }
+    if (user_name_holder === user_name1 && password_holder === password1) {
       $(".form").hide();
-      $(".success").text(`Login success`);
-    } else {
-      console.log("Login failed");
+      $(".success").text("Prijava uspješna");
     }
   });
 });
