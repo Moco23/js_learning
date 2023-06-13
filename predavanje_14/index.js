@@ -7,9 +7,8 @@ $(document).ready(function () {
   $("#login_btn").click(function () {
     const user_name_holder = $("#user_name").val();
     const password_holder = $("#password").val();
-
-    if (user_name_holder === "admin1" && password_holder == "password1") {
-      console.log("Login success");
+    if (user_name_holder == user_naem1 && password_holder == password1) {
+      $(".form").hide();
     } else {
       console.log("Login failed");
     }
