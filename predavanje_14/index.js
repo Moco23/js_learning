@@ -1,7 +1,8 @@
 $(document).ready(function () {
-  const user_name1 = "admin1";
-  const password1 = "password1";
-  const successMessage = $("<p>").addClass("success").insertAfter(".form");
+  var user_name1 = "admin1";
+  var password1 = "password1";
+  var login_fail_count = 0;
+  var successMessage = $("<p>").addClass("success").insertAfter(".form");
 
   $(".success").css({
     fontSize: "2.4rem",
@@ -9,17 +10,26 @@ $(document).ready(function () {
   });
 
   $("#login_btn").click(function () {
+    if (login_fail_count >= 3) {
+      $("#user_name").attr("disabled", true);
+      $("#password").attr("disabled", true);
+    }
+
     $("#usserMess").hide();
     $("#passMess").hide();
 
-    const user_name_holder = $("#user_name").val();
-    const password_holder = $("#password").val();
+    var user_name_holder = $("#user_name").val();
+    var password_holder = $("#password").val();
 
-    if (user_name_holder !== user_name1) {
+    if (user_name_holder != user_name1) {
       $("#usserMess").show();
+      login_fail_count++;
+      return;
     }
-    if (password_holder !== password1) {
+    if (password_holder != password1) {
       $("#passMess").show();
+      login_fail_count++;
+      return;
     }
     if (user_name_holder === user_name1 && password_holder === password1) {
       $(".form").hide();
