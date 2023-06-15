@@ -65,4 +65,11 @@ $(document).ready(function () {
       backgroundColor: element_color,
     });
   }
+
+  $("#border_radius_slider").on("input mousemove", function () {
+    var border_radius_value = $(this).val() + "px";
+    $("#content_div").css({
+      borderRadius: border_radius_value,
+    });
+  });
 });
